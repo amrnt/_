@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Reader::VERSION
   gem.authors       = ["Amr Tamimi"]
   gem.email         = ["amrnt0@gmail.com"]
-  gem.description   = %q{A tool to read a link and get its content as json data}
-  gem.summary       = %q{A tool to read a link and get its content as json data}
+  gem.description   = %q{A tool to read a link and extracts its data}
+  gem.summary       = %q{A tool to read a link and extracts its data}
   gem.homepage      = "http://rubygems.org/gems/reader"
 
   gem.rubyforge_project = "reader"

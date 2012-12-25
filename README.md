@@ -1,6 +1,6 @@
 # Reader [![Build Status](https://travis-ci.org/amrnt/reader.png?branch=master)](https://travis-ci.org/amrnt/reader) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/amrnt/reader)
 
-A tool to read a link and get its content as json data
+A tool to read a link and extracts its data.
 
 ## Usage
 
