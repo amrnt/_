@@ -14,7 +14,10 @@ tc.as_hash # { :title => "...", :body => "..." }
 tc.as_json # "{\"title\": \"...\", \"body\": \"...\"}"
 ```
 
-More to come.
+### Available Providers
+
+* `Reader::Techcrunch`: title, body
+* `Reader::Mashable`: title, body
 
 ## Installation
 
