@@ -1,27 +1,17 @@
+require 'reader/base'
+
 module Reader
-  class Techcrunch
-    def initialize(url)
-      @response ||= Faraday.get url
-      @doc ||= Nokogiri::HTML(@response.body)
-    end
+  class Techcrunch < Base::Provider
+    attr_reader :title, :body
 
-    def title
-      @doc.search('div.module-post-detail h1.headline').first.text
-    end
-
-    def body
-      @doc.search('div.module-post-detail div.body-copy').first.text
-    end
-
-    def as_json
-      MultiJson.dump({
-        :title => title,
-        :body => body
-      })
+    def initialize url
+      doc = super
+      @title = Base.xpath doc, "//div[@id='module-post-detail']/h1[@class = 'headline']"
+      @body = Base.xpath doc, "//div[@id='module-post-detail']/div[@class = 'body-copy']"
     end
   end
 
-  def self.Techcrunch(url)
-    Techcrunch.new(url)
+  def self.Techcrunch url
+    Reader::Techcrunch.new url
   end
 end

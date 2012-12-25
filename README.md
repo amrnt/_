@@ -1,4 +1,4 @@
-# Reader
+# Reader [![Build Status](https://travis-ci.org/amrnt/reader.png?branch=master)](https://travis-ci.org/amrnt/reader) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/amrnt/reader)
 
 A tool to read a link and get its content as json data
 
@@ -7,8 +7,11 @@ A tool to read a link and get its content as json data
 After installing the gem you are ready to go. For now I'm implementing Techcrunch.com
 
 ```ruby
-tc = Reader::Techcrunch('http://techcrunch.com/...')
-tc.as_json # {"title": "...", "body": "..."}
+tc = Reader::Techcrunch 'http://techcrunch.com/...'
+tc.title   # Article Title
+tc.body    # Article body
+tc.as_hash # { :title => "...", :body => "..." }
+tc.as_json # "{\"title\": \"...\", \"body\": \"...\"}"
 ```
 
 More to come.
