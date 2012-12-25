@@ -4,10 +4,9 @@ module Reader
   class Techcrunch < Base::Provider
     attr_reader :title, :body
 
-    def initialize url
-      doc = super
-      @title = Base.xpath doc, "//div[@id='module-post-detail']/h1[@class = 'headline']"
-      @body = Base.xpath doc, "//div[@id='module-post-detail']/div[@class = 'body-copy']"
+    def initialize url, domain = 'www.techcrunch.com'
+      @title = Base.xpath super, "//div[@id='module-post-detail']/h1[@class = 'headline']"
+      @body  = Base.xpath super, "//div[@id='module-post-detail']/div[@class = 'body-copy']"
     end
   end
 
