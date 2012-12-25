@@ -8,14 +8,15 @@ Gem::Specification.new do |gem|
   gem.version       = Reader::VERSION
   gem.authors       = ["Amr Tamimi"]
   gem.email         = ["amrnt0@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{A tool to read a link and get its content as json data}
+  gem.summary       = %q{A tool to read a link and get its content as json data}
+  gem.homepage      = "http://rubygems.org/gems/reader"
 
   gem.rubyforge_project = "reader"
 
-  gem.add_runtime_dependency 'nokogiri'
+  gem.add_runtime_dependency 'nokogiri', '~> 1.5'
   gem.add_runtime_dependency 'faraday', '~> 0.8'
+  gem.add_runtime_dependency 'multi_json', '~> 1.5'
 
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rspec', '~> 2.12.0'

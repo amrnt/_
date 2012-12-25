@@ -12,6 +12,13 @@ module Reader
     def body
       @doc.search('div.module-post-detail div.body-copy').first.text
     end
+
+    def as_json
+      MultiJson.dump({
+        :title => title,
+        :body => body
+      })
+    end
   end
 
   def self.Techcrunch(url)
