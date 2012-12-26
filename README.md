@@ -16,9 +16,9 @@ tc.as_json # "{\"title\": \"...\", \"body\": \"...\"}"
 
 ### Available Providers
 
-* `Reader::Techcrunch`: title, body
-* `Reader::Mashable`: title, body
-* `Reader::Medium`: title, body, author, date
+* `Reader::Techcrunch`: `title, body`
+* `Reader::Mashable`: `title, body`
+* `Reader::Medium`: `title, body, author, publish_date`
 
 ## Installation
 
