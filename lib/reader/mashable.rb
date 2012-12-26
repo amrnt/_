@@ -5,8 +5,8 @@ module Reader
     attr_reader :title, :body
 
     def initialize url, domain = 'www.mashable.com'
-      @title = Base.xpath super, "//div[@id='post-content']/div[@id='post-slider']/article[@id='story']/header[@class='article-header']/h1[@class='title']"
-      @body  = Base.xpath super, "//div[@id='post-content']/div[@id='post-slider']/article[@id='story']/section[@class='article-content']"
+      @title = Base.xpath super, "//div[@id=\"post-content\"]/div[@id=\"post-slider\"]/article[@id=\"story\"]/header[@class=\"article-header\"]/h1[@class=\"title\"]"
+      @body  = Base.xpath super, "//div[@id=\"post-content\"]/div[@id=\"post-slider\"]/article[@id=\"story\"]/section[@class=\"article-content\"]"
     end
   end
 

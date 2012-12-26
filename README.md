@@ -18,6 +18,7 @@ tc.as_json # "{\"title\": \"...\", \"body\": \"...\"}"
 
 * `Reader::Techcrunch`: title, body
 * `Reader::Mashable`: title, body
+* `Reader::Medium`: title, body, author, date
 
 ## Installation
 
@@ -35,7 +36,6 @@ Or install it yourself as:
 
 ## TODO
 
-* Rewrite it and make it extendable
 * Wrtie more tests
 * implement more Websites
 * 

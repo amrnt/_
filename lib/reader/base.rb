@@ -8,7 +8,7 @@ module Reader
     class Provider
       def initialize url, domain
         raise(StandardError, 'Couldn\'t fetch your link through this class!') unless domain.include? URI(url).host
-        @document ||= Base.get url
+        document ||= Base.get url
       end
 
       def as_hash
@@ -26,8 +26,13 @@ module Reader
       parse_body response.body
     end
 
-    def self.xpath doc, xpath
-      doc.xpath(xpath).first.text.strip.chomp
+    def self.xpath doc, xpath, attr = nil
+      if attr
+        text = doc.xpath(xpath).attr(attr)
+      else
+        text = doc.xpath(xpath).first
+      end
+      text.text.strip.chomp
     end
 
   private
